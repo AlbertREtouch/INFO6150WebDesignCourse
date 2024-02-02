@@ -1,0 +1,148 @@
+/* style.css */
+body {
+    font-family: Arial, sans-serif; /* 设置网页的默认字体 */
+    margin: 0; /* 设置网页边缘的外边距为0，通常用来去除浏览器默认的边距 */
+    padding: 0; /* 设置网页边缘的内边距为0 */
+    box-sizing: border-box; /* 当设置元素的宽度和高度时，此属性包括padding和border在内的总宽度和总高度 */
+}
+
+
+header {
+    display: flex;
+    background-color: #6fa4e1; /* 淡蓝色背景 */
+    padding: 5px;
+    text-align: center; /* 文本居中 */
+    color: #fff; /* 文本颜色为白色 */
+    font-family: serif; /* 使用默认的手写风格字体 */
+}
+
+nav {
+    background-color: rgba(255, 255, 255, 0.9); /* 半透明的白色背景 */
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); /* 设置轻微的阴影效果 */
+    padding: 10px;
+    display: flex; /* 使用 Flexbox */
+    justify-content: center; /* 水平居中 */
+}
+
+/* 设置导航链接样式 */
+nav ul {
+    list-style: none; /* 移除列表样式 */
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav li {
+    margin: 0 5px; /* 设置外边距 */
+}
+
+nav a {
+    color: #333; /* 链接颜色 */
+    text-decoration: none; /* 移除链接下划线 */
+    padding: 8px 12px; /* 设置内边距 */
+    border-radius: 5px; /* 圆角边框 */
+}
+
+nav a:hover {
+    background-color: #007bff; /* 悬停时的背景颜色 */
+    color: #fff; /* 悬停时的文字颜色 */
+}
+
+.main-container {
+    display: flex;
+    /* flex-direction: column; 设置为垂直方向排列 */
+}
+
+main {
+    flex: 6;
+    display: flex; /* 使用Flexbox布局，使子元素水平排列 */
+    flex-direction: column; /* 设置为垂直方向排列 */
+    justify-content: space-between; /* 在子元素之间设置等间距 */
+}
+
+section {
+    display: flex;
+    flex: 3; /* 分配给section元素的空间比aside元素多三倍 */
+    padding: 20px; /* 设置文章内部的填充空间 */
+}
+
+section div {
+    flex: 3;
+}
+
+input {
+    border-radius: 8px; /* 设置圆角半径，根据需要调整 */
+    padding: 10px; /* 设置内边距，根据需要调整 */
+    border: 1px solid #ccc; /* 设置边框，根据需要调整 */
+}
+
+article {
+    flex: 6; /* 分配给article元素的空间比aside元素多三倍 */
+    padding: 20px; /* 设置文章内部的填充空间 */
+}
+
+aside {
+    flex: 1; /* 分配给aside元素的空间是article的三分之一 */
+    padding: 20px; /* 设置侧边栏内部的填充空间 */
+    background-color: #f8f8f8; /* 背景颜色 */
+    border: 1px solid #ddd; /* 边框颜色 */
+    border-radius: 10px; /* 圆角 */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+}
+
+aside h3 {
+    color: #333;
+}
+
+.comment {
+    margin-bottom: 20px;
+    border-radius: 5px; /* 圆角 */
+}
+
+.comment-author {
+    font-weight: bold;
+    color: #333; /* 深灰色文本颜色 */
+}
+
+.comment-date {
+    color: #888;
+}
+
+.comment-content {
+    margin-top: 5px;
+    color: #333; /* 深灰色文本颜色 */
+}
+
+/* 悬停时的样式 */
+.comment:hover {
+    background-color: #e0e0e0; /* 淡灰色背景 */
+}
+
+a {
+    color: #007bff; /* 设置链接颜色 */
+    text-decoration: none; /* 移除链接下划线 */
+    font-weight: bold; /* 设置字体加粗 */
+}
+
+a:hover {
+    color: #0056b3; /* 鼠标悬停时修改链接颜色 */
+}
+
+footer {
+    background-color: #f8f8f8; /* 淡灰色背景 */
+    padding: 20px;
+    text-align: center; /* 文本居中 */
+    color: #666; /* 文本颜色 */
+}
+
+/* 设置 footer 内部链接样式 */
+footer a {
+    color: #007bff; /* 链接颜色 */
+    text-decoration: none; /* 移除链接下划线 */
+    font-weight: bold; /* 设置字体加粗 */
+}
+
+footer a:hover {
+    text-decoration: underline; /* 鼠标悬停时显示下划线 */
+}
+
