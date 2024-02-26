@@ -1,0 +1,237 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  background-color: #6fa4e1;
+  padding: 5px;
+  text-align: center;
+  color: #fff;
+  font-family: serif;
+  position: relative; /* 将 header 设置为相对定位 */
+  min-height: 40px; /* 为 header 设置一个最小高度，确保搜索框可见 */
+}
+
+.logo { 
+  max-width: 5%;
+  max-height: 5%;
+  padding: 10px;
+ }
+
+nav {
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+nav li {
+  margin: 0 5px;
+}
+
+nav a {
+  color: #333;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+}
+
+nav a:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.main-container {
+  display: flex;
+}
+
+main {
+  flex: 6;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#search {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 10px; /* 调整一下与边缘的距离 */
+}
+
+#search input {
+  float: right;
+  padding: 10px;
+}
+
+#block-title { 
+  margin-left: 10px; /* 右侧留出一些间距 */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#block-title a { 
+  margin-right: 10px; /* 设置右侧间距 */
+}
+
+
+#news {
+  /* background-color: #777; */
+  color: #fff;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.slider {
+  position: relative;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  max-width: 70%;
+}
+
+.news-image {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 100;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.news-titles {
+  margin-top: 20px;
+}
+
+.news-titles a {
+  display: block;
+  margin-bottom: 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+.news-titles a:hover {
+  color: #007bff;
+}
+
+.book-list {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+
+
+.book-container {
+  width: 120px; /* 设置容器宽度 */
+  height: 200px; /* 设置容器高度 */
+  text-align: center;
+  margin-bottom: 20px; /* 添加底部间距 */
+}
+
+.book-cover img {
+  max-width: 100%; /* 限制图片宽度为容器的100% */
+  max-height: 100%; /* 限制图片高度为容器的100% */
+}
+
+.book-title {
+  margin-top: 10px; /* 设置标题与封面之间的间距 */
+}
+
+#library-card {
+  display: block;
+  margin: 20px auto; /* 居中显示 */
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #f8f9fa;
+  padding: 10px 0;
+  text-align: center;
+}
+
+@media screen and (min-height: 600px) {
+  /* 根据需要调整最小高度 */
+  body {
+    padding-bottom: calc(
+      60px + 60px
+    ); /* 设置页面底部填充，确保 footer 不会遮挡页面内容，这里假设 footer 的高度为 60px，额外加上 20px 的空间 */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* 当屏幕宽度小于等于 600px 时应用的样式 */
+
+  /* 将导航栏放到左边 */
+  nav {
+    flex-direction: column; /* 修改导航栏的排列方向为垂直方向 */
+  }
+
+  nav ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* 修改导航链接的排列方向为垂直方向 */
+  }
+
+  nav li {
+    margin: 5px 0; /* 调整导航链接之间的垂直间距 */
+  }
+
+  #book-list {
+    display: flex;
+    flex-wrap: wrap; /* 允许书籍容器在需要时换行 */
+    justify-content: space-around;
+  }
+
+  .book-container {
+    width: 45%; /* 将每个书籍容器宽度设置为屏幕宽度的一部分 */
+    margin-bottom: 20px;
+  }
+}
+

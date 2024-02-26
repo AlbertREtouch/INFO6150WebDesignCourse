@@ -1,0 +1,165 @@
+#block-title { 
+  margin-left: 10px; /* 右侧留出一些间距 */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#block-title a { 
+  margin-right: 10px; /* 设置右侧间距 */
+}
+
+
+#news {
+  /* background-color: #777; */
+  color: #fff;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.slider {
+  display: flex; /* 将 display 设置为 flex */
+  flex-direction: column; /* 垂直方向排列子元素 */
+  position: relative;
+  /* display: inline-block; */
+  justify-content: center;
+  align-items: center;
+  max-width: 85%;
+}
+
+.news-image {
+  max-width: 100%;
+  max-height: 40%;
+  /* height: auto; */
+  object-fit: cover;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 100;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.slider h2 {
+  position: absolute;
+  bottom: 10px; /* 调整标题到图片底部的距离 */
+  left: 0;
+  right: 0; /* 让标题水平居中 */
+  color: white;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px 10px;
+  
+}
+
+.news-titles {
+  margin-top: 20px;
+}
+
+.news-titles a {
+  display: block;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-decoration: none;
+  color: #333;
+}
+
+.news-titles a:hover {
+  color: #007bff;
+}
+
+.book-list {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+
+
+.book-container {
+  width: 120px; /* 设置容器宽度 */
+  height: 200px; /* 设置容器高度 */
+  text-align: center;
+  margin-bottom: 20px; /* 添加底部间距 */
+}
+
+.book-container a {
+  text-decoration: none;
+}
+
+.book-cover img {
+  max-width: 100%; /* 限制图片宽度为容器的100% */
+  max-height: 50%; /* 限制图片高度为容器的100% */
+}
+
+.book-title {
+  margin-top: 10px; /* 设置标题与封面之间的间距 */
+}
+
+#library-card {
+  display: block;
+  margin: 20px auto; /* 居中显示 */
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+@media screen and (max-width: 1024px) {
+
+  #book-list {
+    display: flex;
+    flex-wrap: wrap; /* 允许书籍容器在需要时换行 */
+    justify-content: space-around;
+  }
+
+  .book-container {
+    width: 30%; /* 将每个书籍容器宽度设置为屏幕宽度的一部分 */
+    height: 45%;
+    margin-bottom: 20px;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+
+
+  .book-container {
+    width: 45%; /* 将每个书籍容器宽度设置为屏幕宽度的一部分 */
+    height: 30%;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 512px) {
+
+  .book-container {
+    width: 90%; /* 将每个书籍容器宽度设置为屏幕宽度的一部分 */
+    height: 15%;
+    margin-bottom: 20px;
+  }
+}
+
