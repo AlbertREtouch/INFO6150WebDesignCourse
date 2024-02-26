@@ -6,7 +6,7 @@ main section {
 
 main section div {
     margin-left: 25px;
-
+    /* flex: 3; */
 }
 
 .book-datail {
@@ -71,9 +71,9 @@ a:hover {
     color: #0056b3;
 }
 
-
+/* Media queries */
 @media screen and (max-width: 1024px) {
-    
+    /* 平板 */
 
     aside {
         display: none;
@@ -85,7 +85,7 @@ a:hover {
     main section {
         flex-direction: column;
     }
-    
+    /* 手机 */
     header h1 {
         font-size: 20px;
     }
