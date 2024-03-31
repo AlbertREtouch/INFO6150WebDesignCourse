@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Module 8 assignment</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <h1>Registration</h1>
+      <section>
+        <form id="registrationForm" onsubmit="handleClick(event)">
+          <label for="name">Name<span style="color: red;">*</span></label>
+          <input type="text" id="name" name="name" required  />
+          <label for="yearOfBirth">Year of Birth<span style="color: red;">*</span>:</label>
+          <input
+            type="number"
+            id="yearOfBirth"
+            name="yearOfBirth"
+            required
+          />
+          <label
+            ><input type="checkbox" id="usResident" name="usResident" /> Do you
+            live in the United States?</label
+          >
+          <label for="zipcode">Zipcode(required if you are a US redident):</label>
+          <input
+            type="text"
+            id="zipcode"
+            name="zipcode"
+          />
+          <label for="password">Password<span style="color: red;">*</span>:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            required
+          />
+          <p>Preferred type of pizza(In return for filling out the form)<span style="color: red;">*</span>:</p>
+          <label
+            ><input
+              type="radio"
+              name="pizzaPreference"
+              value="With pineapple"
+              required
+            />
+            With pineapple</label
+          >
+          <label
+            ><input
+              type="radio"
+              name="pizzaPreference"
+              value="Without pineapple"
+              required
+            />
+            Without pineapple</label
+          >
+          <label
+            ><input
+              type="radio"
+              name="pizzaPreference"
+              value="I do not like pizza"
+              required
+            />
+            I do not like pizza</label
+          >
+          <label><span style="color: red;">*: Required</span></label>
+          <button type="submit" id="btn">Submit</button>
+        </form>
+        <div id="errorMessage"></div>
+        <div id="successMessage"></div>
+      </section>
+    </main>
+  </body>
+</html>
