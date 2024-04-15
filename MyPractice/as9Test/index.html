@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Module 8 assignment</title>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <h1>Some geography data</h1>
+    <form id="form-login" method="post" action="anotherpage.html">
+      <label for="username">Username:</label>
+      <input type="text" id="input-username" name="username" value="someone" />
+      <label for="password">Password:</label>
+      <input type="password" id="input-password" name="password" />
+      <input type="submit" value="Log in" />
+    </form>
+    <section id="app1">
+      <button id="btn-get-number" type="button" onclick="handleClick1()">
+        Click here
+      </button>
+      <div id="result1">Your number is: 0.523234</div>
+    </section>
+    <h1>Number division</h1>
+    <section id="app">
+      <form id="form" onsubmit="handleClick(event)">
+        <label for="numerator">
+          <div>Numerator</div>
+          <input
+            type="text"
+            id="numerator"
+            name="numerator"
+            size="5"
+            requiredpattern="/^-?\d*(\.\d+)?$/"
+          />
+        </label>
+        <label for="denominator">
+          <div>Denominator</div>
+          <input type="text" id="denominator" name="denominator" size="5" />
+        </label>
+        <!-- <button id="btn-calculate" type="button" onclick="handleClick()">
+          Calculate
+        </button> -->
+        <input type="submit" value="Calculate" id="btn-calculate" />
+      </form>
+      <div id="errormsg"></div>
+      <div id="result"></div>
+    </section>
+
+    <main id="geography">
+      <!-- Insert HTML here. It has to be created dynamically from GEOGRAPHY_LIST in script.js -->
+    </main>
+  </body>
+  <style>
+    html {
+      font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+        sans-serif;
+      font-size: 10px;
+      background: skyblue; /* this is the text color */
+      color: black;
+    }
+    body {
+      /* 1.4 * 10px = 14px */ /* It is recommended to use rem for font sizes, to play well with browser zoom */
+      font-size: 1.6rem;
+    }
+    h1 {
+      font-size: 2.5rem;
+      color: #fff;
+      margin: 2rem 0; /* this centers the text (flow content, eg. display: inline) horizontally */
+      text-align: center;
+    }
+    section {
+      margin: 10px;
+    }
+    form {
+      margin: 20px;
+    }
+    #app1 {
+      border: 1px solid #293f29;
+      background: goldenrod; /* this box will expand as much as possible, but only up until 1200px */
+      width: 100%;
+      max-width: 1200px; /* add some spacing between the border and the content */
+      padding: 2rem; /* this will center the box (display: block) horizontally */
+      margin: 0 auto;
+    }
+    #result {
+      color: #111;
+      font-weight: bold; /* some vertical spacing for the text */
+      margin: 1rem 0;
+    }
+    label {
+      /* labels are usually display: inline; with this trick we can set a line per input with a semantic HTML */
+      display: block;
+      padding: 1rem 0;
+    }
+    #btn-calculate {
+      background: #8a897c;
+      color: #fff;
+      font-size: 1.6rem;
+      padding: 1rem;
+    }
+    #errormsg {
+      color: red;
+      padding: 1rem 0;
+    }
+    /* ul {
+    list-style: none;
+    margin: 20px;
+    padding: 0;
+}
+
+li {
+    padding: 6px;
+    border: 1px solid #eee;
+    border-color: aquamarine;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
+}
+
+li:hover {
+    background-color: #ddd;
+}
+
+li {
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+} */
+  </style>
+</html>

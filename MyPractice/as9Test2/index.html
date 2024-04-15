@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Module 8 assignment</title>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <section>
+        <form id="registrationForm" onsubmit="handleClick(event)">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required minlength="3" />
+
+
+          <label for="yearOfBirth">Year of Birth:</label>
+          <input
+            type="number"
+            id="yearOfBirth"
+            name="yearOfBirth"
+            required
+            min="1901"
+            max="2099"
+          />
+
+
+          <label
+            ><input type="checkbox" id="usResident" name="usResident" /> Do you
+            live in the United States?</label
+          >
+
+          <label for="zipcode">Zipcode:</label>
+          <input
+            type="text"
+            id="zipcode"
+            name="zipcode"
+            pattern="\d{5}"
+            title="Five digit zip code"
+          />
+
+
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            required
+            minlength="8"
+          />
+
+
+          <p>Preferred type of pizza:</p>
+          <label
+            ><input
+              type="radio"
+              name="pizzaPreference"
+              value="With pineapple"
+              required
+            />
+            With pineapple</label
+          >
+          <label
+            ><input
+              type="radio"
+              name="pizzaPreference"
+              value="Without pineapple"
+              required
+            />
+            Without pineapple</label
+          >
+          <label
+            ><input
+              type="radio"
+              name="pizzaPreference"
+              value="I do not like pizza"
+              required
+            />
+            I do not like pizza</label
+          >
+          <button type="submit" id="btn">Submit</button>
+        </form>
+        <div id="errorMessage"></div>
+        <div id="successMessage"></div>
+      </section>
+    </main>
+  </body>
+  <style>
+    html {
+      font-family: Arial, Calibri, sans-serif;
+      font-size: 12px;
+      background: skyblue;
+    }
+    body {
+      font-size: 1.6rem;
+      margin: 10px;
+    }
+    form {
+      background-color: rgb(255, 211, 114);
+      padding: 20px;
+      border-radius: 5px;
+    }
+    h1 {
+      font-size: 2.5rem;
+      color: #fff;
+      margin: 2rem 0; /* this centers the text (flow content, eg. display: inline) horizontally */
+      text-align: center;
+    }
+    section {
+      margin: 10px;
+    }
+
+    #app1 {
+      border: 1px solid #293f29;
+      background: goldenrod; /* this box will expand as much as possible, but only up until 1200px */
+      width: 100%;
+      max-width: 1200px; /* add some spacing between the border and the content */
+      padding: 2rem; /* this will center the box (display: block) horizontally */
+      margin: 0 auto;
+    }
+    #result {
+      color: #111;
+      font-weight: bold; /* some vertical spacing for the text */
+      margin: 1rem 0;
+    }
+    label {
+      /* labels are usually display: inline; with this trick we can set a line per input with a semantic HTML */
+      display: block;
+      padding: 1rem 0;
+    }
+    #btn {
+      /* background: #8a897c;
+      color: #fff;
+      font-size: 1.6rem;
+      padding: 1rem; */
+      background-color: #f05fe8;
+      color: white;
+      padding: 1rem;
+      margin: 1rem;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    #btn:hover {
+      opacity: 0.8;
+    }
+    #errormsg {
+      color: red;
+      padding: 1rem 0;
+    }
+    #successMessage {
+      color: green;
+    }
+  </style>
+</html>
