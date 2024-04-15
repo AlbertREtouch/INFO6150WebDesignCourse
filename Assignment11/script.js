@@ -5,7 +5,6 @@ function getJoke() {
     .then(response => response.json())
     .then(data => {
       const jokeText = data.value;
-      const jokeImageUrl = data.icon_url;
       console.log(data);
       document.getElementById('jokeContainer').innerHTML = `<p>${jokeText}</p>`;
     })
